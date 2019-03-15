@@ -1,0 +1,285 @@
+.App {
+  background: #F0F1F3;
+}
+
+.tableArea {
+  min-width: 1080px;
+  display: flex;
+  padding: 12px;
+  align-items: stretch;
+}
+
+.tableArea .left,
+.tableArea .right {
+  flex: auto;
+  padding: 8px;
+}
+
+.tableArea .left {
+  background: #bdd2f8;
+}
+
+.tableArea .right {
+  background: #FFF;
+}
+
+.tableArea .operateBox {
+  display: flex;
+  align-items: center;
+}
+
+.tableArea .operate {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #6495ed;
+}
+
+.tableArea .operate:hover {
+  color: #3763b4
+}
+
+.tableArea .operateBox .line {
+  display: block;
+  width: 2px;
+  height: 18px;
+  background: #bdd2f8;
+  margin: 0 8px;
+}
+
+.tableArea .title {
+  font-size: 18px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* 模态框 */
+
+.modalWrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background: rgba(72, 87, 103, 0.6);
+}
+
+.modalWrapper .modalBox {
+  background: #FFFFFF;
+  border-radius: 4px;
+  width: 500px;
+  min-height: 220px;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.modalWrapper .modalBox .closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.modalWrapper .modalBox .closeBtn .icon-close {
+  width: 100%;
+  height: 100%;
+}
+
+.modalWrapper .modalBox .modal-title {
+  height: 59px;
+  line-height: 59px;
+  text-indent: 24px;
+  border-bottom: 1px solid #E9EBEE;
+  font-size: 18px;
+}
+
+.modalWrapper .modalBox .modal-content {
+  padding: 24px;
+}
+
+/* 内部转账弹窗 */
+.transferBox .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.transferBox .row .label {
+  display: block;
+  width: 90px;
+  text-align: right;
+}
+
+.transferBox .row .ipt {
+  width: 260px;
+  height: 36px;
+  border: 1px solid #E9EBEE;
+  padding: 0 16px;
+  line-height: 36px;
+  cursor: pointer;
+}
+
+.transferBox .row .ipt:hover {
+  border: 1px solid #58A7F8;
+}
+
+.transferBox .row .ipt:focus {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, .2)
+}
+
+.transferBox .all {
+  color: #58A7F8;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+.transferBox .all:hover {
+  color: #288BF2;
+}
+
+.common-btn {
+  width: 108px;
+  height: 36px;
+  background: #58A7F8;
+  color: #FFFFFF;
+  font-size: 14px;
+  margin: 0 auto;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.common-btn:hover {
+  background: #288BF2;
+}
+
+/* 提现弹窗 */
+.withdrawBox .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.withdrawBox .row .label {
+  display: block;
+  width: 90px;
+  text-align: right;
+}
+
+.withdrawBox .row .ipt {
+  width: 260px;
+  height: 36px;
+  border: 1px solid #E9EBEE;
+  padding: 0 16px;
+  line-height: 36px;
+  cursor: pointer;
+}
+
+.withdrawBox .row .ipt:hover {
+  border: 1px solid #58A7F8;
+}
+
+.withdrawBox .row .ipt:focus {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, .2)
+}
+
+
+.withdrawBox .row .ipt:disabled {
+  cursor: not-allowed;
+}
+
+.withdrawBox .all {
+  color: #58A7F8;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+.withdrawBox .all:hover {
+  color: #288BF2;
+}
+
+
+/* 账户管理 */
+.accountBox {
+  padding: 24px;
+}
+
+.accountBox .add,
+.accountBox .delete {
+  color: #58A7F8;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+.accountBox .add:hover {
+  color: #288BF2;
+}
+
+.accountBox .delete {
+  color: #F75A5A;
+  opacity: 0.8;
+}
+
+.accountBox .delete:hover {
+  color: #F75A5A;
+}
+
+/* 新增账户弹窗 */
+.addAccountBox .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.addAccountBox .row .label {
+  display: block;
+  width: 120px;
+  text-align: right;
+}
+
+.addAccountBox .row .ipt {
+  width: 300px;
+  height: 36px;
+  border: 1px solid #E9EBEE;
+  padding: 0 16px;
+  line-height: 36px;
+  cursor: pointer;
+}
+
+.addAccountBox .row .ipt:hover {
+  border: 1px solid #58A7F8;
+}
+
+.addAccountBox .row .ipt.error {
+  border: 1px solid #F75A5A;
+}
+
+.addAccountBox .row .ipt:focus {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, .2)
+}
+
+/* 管理弹窗 */
+.deleteAccountBox {
+  width: 1180px !important;
+}
+
+.deleteAccountBox .ant-table-tbody>tr>td {
+  vertical-align: middle;
+}
+
+.deleteAccountBox .modal-content {
+  max-height: 500px;
+  overflow: auto;
+}

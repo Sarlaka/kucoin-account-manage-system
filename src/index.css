@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: block;
+  font-size: 12px;
+  font-family: "PingFang SC";
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input:not(:read-only):focus {
+  border: 1px solid rgb(88, 167, 248);
+}
+
+input::-webkit-input-placeholder {
+  color: #B5BDC6;
+  font-family: 'PingFangSC-light';
+}
+
+input::-moz-input-placeholder {
+  color: #B5BDC6;
+  font-family: 'PingFangSC-light';
+}
+
+input::-o-input-placeholder {
+  color: #B5BDC6;
+  font-family: 'PingFangSC-light';
+}
+input:disabled{
+  cursor: not-allowed;
+  background: #f9f9f9;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #B5BDC6;
+  font-family: 'PingFangSC-light';
+}
+
+textarea::-moz-input-placeholder {
+  color: #B5BDC6;
+  font-family: 'PingFangSC-light';
+}
+
+textarea::-o-input-placeholder {
+  color: #B5BDC6;
+  font-family: 'PingFangSC-light';
+}
