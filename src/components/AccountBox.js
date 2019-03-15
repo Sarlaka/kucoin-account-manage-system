@@ -21,6 +21,8 @@ export default class AccountBox extends Component {
             //     password: 'by199232'
             //   })
             this.props.initAccountHandle(accountController.account[0])
+        }else{
+            this.props.loadHandle()
         }
     }
     handleChange=(id)=>{

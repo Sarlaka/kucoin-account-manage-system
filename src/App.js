@@ -43,11 +43,16 @@ class App extends Component {
           console.log(err)
       })
 }
+loadHandle=()=>{
+  this.setState({
+    loading:false 
+  })
+}
   render() {
     const {kucoin2,tradeAccount,mainAccount,loading} = this.state
     return (
       <div className="App">
-        <AccountBox initAccountHandle={this.initAccountHandle}/>
+        <AccountBox initAccountHandle={this.initAccountHandle} loadHandle={this.loadHandle}/>
         <div className="tableArea">
           <div className="left">
             <TradeTable data={tradeAccount} loading={loading}/>
