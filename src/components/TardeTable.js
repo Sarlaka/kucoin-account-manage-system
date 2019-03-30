@@ -23,7 +23,7 @@ export default class TradeTable extends Component {
     }
     render(){
         const {showModal,currency} = this.state
-        const {data,loading} = this.props
+        const {data,loading,currentUser,recData} = this.props
         const columns = [{
             title: '币种',
             dataIndex: 'currency',
@@ -63,6 +63,8 @@ export default class TradeTable extends Component {
                     type={'trade'}
                     currency={currency}
                     closeHandle={this.closeModalHandle}
+                    currentUser={currentUser}
+                    recData={recData}
                   />:''
                 }
             </div>

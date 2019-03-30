@@ -49,16 +49,16 @@ loadHandle=()=>{
   })
 }
   render() {
-    const {kucoin2,tradeAccount,mainAccount,loading} = this.state
+    const {kucoin2,tradeAccount,mainAccount,loading,currentUser} = this.state
     return (
       <div className="App">
         <AccountBox initAccountHandle={this.initAccountHandle} loadHandle={this.loadHandle}/>
         <div className="tableArea">
           <div className="left">
-            <TradeTable data={tradeAccount} loading={loading}/>
+            <TradeTable data={tradeAccount} loading={loading} currentUser={currentUser} recData={mainAccount}/>
           </div>
           <div className="right">
-            <MainTable data={mainAccount} loading={loading}/>
+            <MainTable data={mainAccount} loading={loading} currentUser={currentUser} recData={tradeAccount}/>
           </div>
         </div>
       </div>

@@ -36,7 +36,7 @@ export default class MainTable extends Component {
     }
     render(){
         const {showModal,showWithdrawModal,currency} = this.state
-        const {data,loading} = this.props
+        const {data,loading,currentUser,recData} = this.props
         const columns = [{
             title: '币种',
             dataIndex: 'currency',
@@ -80,6 +80,8 @@ export default class MainTable extends Component {
                     type={'main'}
                     currency={currency}
                     closeHandle={this.closeModalHandle}
+                    currentUser={currentUser}
+                    recData={recData}
                   />:''
                 }
                 {
@@ -87,6 +89,7 @@ export default class MainTable extends Component {
                   ?<WithdrawModal
                     currency={currency}
                     closeHandle={this.closeWithdrawModalHandle}
+                    currentUser={currentUser}
                   />
                   :''
                 }
